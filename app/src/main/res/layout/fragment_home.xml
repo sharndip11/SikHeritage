@@ -1,9 +1,76 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.sharndip.sikheritage.HomeFragment">
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
 
+        <ViewFlipper
+            android:id="@+id/backgroundViewFlipper1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
 
+            <ImageView
+                android:id="@+id/backgroundImageView8"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic1"/>
 
-</FrameLayout>
+            <ImageView
+                android:id="@+id/backgroundImageView7"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic2"/>
+
+            <ImageView
+                android:id="@+id/backgroundImageView6"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic3"/>
+
+            <ImageView
+                android:id="@+id/backgroundImageView5"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic4"/>
+
+            <ImageView
+                android:id="@+id/backgroundImageView4"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic5"/>
+
+            <ImageView
+                android:id="@+id/backgroundImageView3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic6"/>
+
+            <ImageView
+                android:id="@+id/backgroundImageView2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic7"/>
+
+            <ImageView
+                android:id="@+id/backgroundImageView1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pic8"/>
+
+        </ViewFlipper>
+
+    </LinearLayout>
+
+</RelativeLayout>

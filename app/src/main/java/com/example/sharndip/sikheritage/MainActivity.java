@@ -14,9 +14,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.ViewFlipper;
 
 import java.util.ArrayList;
 
@@ -28,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     private ListView navList;
     public FragmentTransaction fragmentTransaction;
     private FragmentManager fragmentManager;
+
+    Animation fade_in, fade_out;
+    ViewFlipper viewFlipper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +65,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         fragmentManager = getSupportFragmentManager();
 
         loadSelection(0);
+
+        viewFlipper = (ViewFlipper) this.findViewById(R.id.backgroundViewFlipper1);
+
+        fade_in = AnimationUtils.loadAnimation(this,
+                android.R.anim.fade_in);
+        fade_out =  AnimationUtils.loadAnimation(this,
+                android.R.anim.fade_out);
+
+        viewFlipper.setInAnimation(fade_in);
+        viewFlipper.setOutAnimation(fade_out);
+
+        //anim automatique
+        viewFlipper.setAutoStart(true);
+        viewFlipper.setFlipInterval(5000);
+        viewFlipper.startFlipping();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
